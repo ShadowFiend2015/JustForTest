@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="content-type" content="text/html" charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+        var str;
+        var result;
+        function onclicknum(num) {
+            str = document.getElementById("nummessage");
+            str.value += num;
+        }
+        function onclickclean() {
+            str = document.getElementById("nummessage");
+            str.value = "";
+        }
+        function onclickequal() {
+            str = document.getElementById("nummessage");
+            result = eval(str.value);
+            str.value = result;
+        }
+    </script>
+</head>
+<body>
+
+<table border="1" align="center">
+    <tr>
+        <td colspan="4">
+            <input type="text" id="nummessage" readonly="true"
+                   style="height: 90px; width: 98%; font-size: 50px" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" bgColor="#888888">
+            <input type="button" value="AC" id="clear" onclick="onclickclean()"
+                   style="height: 70px; width: 100%;; font-size: 35px" />
+        </td>
+        <td bgColor="#888888">
+            <input type="button" value="%" id="mod" onclick="onclicknum('%')"
+                   style="height: 70px; width: 100%; font-size: 35px" />
+        </td>
+        <td bgColor="#FFA500">
+            <input type="button" value="/" id="division" onclick="onclicknum('/')"
+                   style="height: 70px; width: 100%; font-size: 35px" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="7" id="7" onclick="onclicknum(7)"
+                   style="height: 70px; width: 100%; font-size: 35px;" />
+        </td>
+        <td>
+            <input type="button" value="8" id="8" onclick="onclicknum(8)"
+                   style="height: 70px; width: 100%; font-size: 35px;" />
+        </td>
+        <td>
+            <input type="button" value="9" id="9" onclick="onclicknum(9)"
+                   style="height: 70px; width: 100%; font-size: 35px;" />
+        </td>
+        <td bgColor="#FFA500">
+            <input type="button" value="*" id="mul" onclick="onclicknum('*')"
+                   style="height: 70px; width: 100%; font-size: 35px;" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="4" id="4" onclick="onclicknum(4)"
+                   style="height: 70px; width: 100%; font-size: 35px;" />
+        </td>
+        <td>
+            <input type="button" value="5" id="5" onclick="onclicknum(5)"
+                   style="height: 70px; width: 100%; font-size: 35px;" />
+        </td>
+        <td>
+            <input type="button" value="6" id="6" onclick="onclicknum(6)"
+                   style="height: 70px; width: 100%; font-size: 35px;" />
+        </td>
+        <td bgColor="#FFA500">
+            <input type="button" value="-" id="sub" onclick="onclicknum('-')"
+                   style="height: 70px; width: 100%; font-size: 35px;" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="1" id="1" onclick="onclicknum(1)"
+                   style="height: 70px; width: 100%; font-size: 35px;" />
+        </td>
+        <td>
+            <input type="button" value="2" id="2" onclick="onclicknum(2)"
+                   style="height: 70px; width: 100%; font-size: 35px;" />
+        </td>
+        <td>
+            <input type="button" value="3" id="3" onclick="onclicknum(3)"
+                   style="height: 70px; width: 100%; font-size: 35px;" />
+        </td>
+        <td bgColor="#FFA500">
+            <input type="button" value="+" id="add" onclick="onclicknum('+')"
+                   style="height: 70px; width: 100%; font-size: 35px;" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="button" value="0" id="0" onclick="onclicknum(0)"
+                   style="height: 70px; width: 100%; font-size: 35px;" />
+        </td>
+        <td>
+            <input type="button" value="." id="dot" onclick="onclicknum('.')"
+                   style="height: 70px; width: 100%; font-size: 35px;" />
+        </td>
+        <td bgColor="#FFA500">
+            <input type="button" value="=" id="equal" onclick="onclickequal()"
+                   style="height: 70px; width: 100%; font-size: 35px;" />
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
